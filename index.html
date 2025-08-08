@@ -3,130 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Joy Makeri | Software Developer Portfolio</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f5f7fa;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      font-size: 1.1em;
-      margin-top: 5px;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      max-width: 1000px;
-      margin: 30px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #003366;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 10px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    ul li {
-      margin-bottom: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #e9ecef;
-      font-size: 14px;
-      color: #555;
-    }
-    a {
-      color: #003366;
-    }
-  </style>
+  <title>Joy Makeri | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
   <h1>Joy Makeri</h1>
-  <p>Aspiring Software Developer | Tech Enthusiast | Problem Solver</p>
+  <p>Aspiring Software Developer | Tech Enthusiast</p>
   <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am a motivated and detail-oriented Computer Science student with a strong foundation in software development, database management, and cloud technologies. I’m passionate about building scalable digital solutions and continuously learning new technologies to stay ahead in the fast-evolving tech industry.
-  </p>
-  <p>
-    I am currently expanding my technical knowledge through hands-on experience, personal projects, and industry certifications in IT essentials. My goal is to contribute to meaningful tech initiatives that improve system performance, enhance user experience, and drive digital transformation.
-  </p>
-</section>
+<main>
+  <section class="hero">
+    <h2><span id="typed"></span></h2>
+    <p>Welcome to my portfolio! Explore my skills, projects, and professional background.</p>
+  </section>
 
-<section id="skills">
-  <h2>Technical Skills</h2>
-  <ul>
-    <li>Languages: Java, C, C++, PHP, SQL</li>
-    <li>Web Development: HTML, CSS, JavaScript</li>
-    <li>Database Management: MySQL</li>
-    <li>Cloud Computing & Data Analytics</li>
-    <li>Network Administration & Cybersecurity</li>
-    <li>System Maintenance & Troubleshooting</li>
-  </ul>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <p><strong>Hospital Management System</strong></p>
-  <ul>
-    <li>Developed a full-stack web application for hospital administration</li>
-    <li>Features include patient records, billing, appointments, and pharmacy modules</li>
-    <li>Technologies used: PHP, MySQL, HTML, CSS, JavaScript</li>
-    <li>Focused on secure data handling and user-friendly interfaces</li>
-  </ul>
-
-  <p><strong>Portfolio Website</strong></p>
-  <ul>
-    <li>Designed and hosted a responsive personal website using GitHub Pages</li>
-    <li>Built with semantic HTML5 and modern CSS for clean, accessible design</li>
-  </ul>
-
-  <p><em>Additional projects and academic work will be added soon.</em></p>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p><strong>Email:</strong> <a href="mailto:joycemakeri04@gmail.com">joycemakeri04@gmail.com</a></p>
-  <p><strong>Phone:</strong> +254 724 595 919</p>
-  <p>I am open to internship opportunities, collaborations, or networking within the tech community. Feel free to reach out!</p>
-</section>
+  <section class="quick-links">
+    <h3>Explore</h3>
+    <ul>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">My Projects</a></li>
+      <li><a href="contact.html">Get in Touch</a></li>
+    </ul>
+  </section>
+</main>
 
 <footer>
-  <p>&copy; 2025 Joy Makeri | All rights reserved</p>
+  <p>&copy; 2025 Joy Makeri. All rights reserved.</p>
 </footer>
+
+<script>
+  const typedText = "Hi, I'm Joy Makeri – Software Developer, Tech Enthusiast, Problem Solver.";
+  let i = 0;
+  function typeEffect() {
+    if (i < typedText.length) {
+      document.getElementById("typed").innerHTML += typedText.charAt(i);
+      i++;
+      setTimeout(typeEffect, 50);
+    }
+  }
+  window.onload = typeEffect;
+</script>
 
 </body>
 </html>
