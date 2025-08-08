@@ -20,19 +20,22 @@
 </header>
 
 <main>
-  <section class="hero">
+  <section class="contact-form">
     <h2>Contact Me</h2>
-    <p>If you'd like to connect, collaborate, or offer an internship, please send a message below:</p>
+    <p>Have a question, collaboration, or opportunity? I’d love to hear from you.</p>
 
-    <form action="https://formspree.io/f/mwkgrzor" method="POST">
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required /><br /><br />
+    <form action="https://formspree.io/f/mgvzpdgw" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required />
 
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required /><br /><br />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
 
-      <label for="message">Message:</label><br />
-      <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+      <label for="subject">Subject</label>
+      <input type="text" name="subject" id="subject" required />
+
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="6" required></textarea>
 
       <button type="submit">Send Message</button>
     </form>
