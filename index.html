@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<!-- 🌙 Dark Mode Toggle & CV Button -->
+<div class="top-bar">
+  <button id="toggleMode">🌙 Dark Mode</button>
+  <a href="Joy-Makeri-CV.pdf" download class="cv-btn">📄 Download CV</a>
+</div>
+
 <header>
   <h1>Joy Makeri</h1>
   <p>Aspiring Software Developer | Tech Enthusiast</p>
@@ -35,11 +41,15 @@
   </section>
 </main>
 
+<!-- 🔝 Scroll to Top Button -->
+<button onclick="scrollToTop()" id="scrollBtn" title="Go to top">↑</button>
+
 <footer>
   <p>&copy; 2025 Joy Makeri. All rights reserved.</p>
 </footer>
 
 <script>
+  // Typing animation
   const typedText = "Hi, I'm Joy Makeri – Software Developer, Tech Enthusiast, Problem Solver.";
   let i = 0;
   function typeEffect() {
@@ -50,6 +60,22 @@
     }
   }
   window.onload = typeEffect;
+
+  // Dark mode toggle
+  const toggleMode = document.getElementById("toggleMode");
+  toggleMode.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    toggleMode.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
+  });
+
+  // Scroll to top button
+  const scrollBtn = document.getElementById("scrollBtn");
+  window.onscroll = () => {
+    scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 </script>
 
 </body>
