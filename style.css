@@ -1,30 +1,109 @@
-/* 🌙 Dark Mode */
+/* 🌐 GENERAL RESET + LAYOUT */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+header {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin: 5px 0 15px;
+  font-size: 1.1em;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 960px;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #e9ecef;
+  color: #555;
+  font-size: 14px;
+}
+
+/* 🌙 DARK MODE */
 body.dark {
   background-color: #121212;
   color: #eee;
 }
-body.dark header {
-  background-color: #222;
-}
-body.dark nav a {
-  color: #ccc;
-}
-body.dark section.hero,
-body.dark section.quick-links li {
-  background-color: #1e1e1e;
-  color: #eee;
-  border-color: #444;
-}
+
+body.dark header,
 body.dark footer {
   background-color: #222;
   color: #aaa;
 }
-body.dark .cv-btn {
+
+body.dark nav a {
+  color: #ccc;
+}
+
+body.dark section.hero,
+body.dark section.quick-links li,
+body.dark .project-detail,
+body.dark .contact-form {
+  background-color: #1e1e1e;
+  color: #eee;
+  border-color: #444;
+}
+
+body.dark .cv-btn,
+body.dark .btn,
+body.dark .contact-form button {
   background-color: #555;
   color: white;
 }
 
-/* 🔝 Scroll to Top Button */
+/* 📥 TOP BAR BUTTONS */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px 20px;
+  background: #eee;
+}
+
+.cv-btn,
+#toggleMode {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #003366;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cv-btn:hover,
+#toggleMode:hover {
+  background-color: #00509e;
+}
+
+/* 🔝 SCROLL TO TOP BUTTON */
 #scrollBtn {
   display: none;
   position: fixed;
@@ -40,33 +119,12 @@ body.dark .cv-btn {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 #scrollBtn:hover {
   background-color: #00509e;
 }
 
-/* 🌟 CV Button + Dark Mode Toggle Styling */
-.top-bar {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  padding: 10px 20px;
-  background: #eee;
-}
-.cv-btn,
-#toggleMode {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 6px;
-  background-color: #003366;
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: bold;
-}
-.cv-btn:hover,
-#toggleMode:hover {
-  background-color: #00509e;
-}
+/* 🎴 PROJECT GRID */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -117,12 +175,7 @@ body.dark .cv-btn {
   background-color: #00509e;
 }
 
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* 📄 Project Detail Page */
+/* 📄 PROJECT DETAIL PAGE */
 .project-detail {
   max-width: 900px;
   margin: 40px auto;
@@ -166,7 +219,8 @@ body.dark .cv-btn {
 .project-detail .back-btn:hover {
   background: #555;
 }
-/* 📬 Contact Form */
+
+/* 📬 CONTACT FORM */
 .contact-form {
   max-width: 700px;
   margin: 40px auto;
@@ -218,4 +272,21 @@ body.dark .cv-btn {
 
 .contact-form button:hover {
   background: #00509e;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
